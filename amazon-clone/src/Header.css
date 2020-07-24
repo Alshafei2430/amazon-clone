@@ -2,6 +2,9 @@
   background-color: #131521;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .header__logo {
   width: 100px;
@@ -9,6 +12,14 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 18px;
+}
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+}
+.header__basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .header__nav {
   display: flex;

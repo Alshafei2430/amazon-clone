@@ -21,25 +21,25 @@ function Header() {
         <Link to="/login" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne">Hello Abdo</span>
-            <span className="header_optionLineTwo">Sign In</span>
+            <span className="header__optionLineTwo">Sign In</span>
           </div>
         </Link>
         <Link to="/" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
-            <span className="header_optionLineTwo">Orders</span>
+            <span className="header__optionLineTwo">Orders</span>
           </div>
         </Link>
         <Link to="/" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne">Your</span>
-            <span className="header_optionLineTwo">Prime</span>
+            <span className="header__optionLineTwo">Prime</span>
           </div>
         </Link>
-        <Link to="/checkout">
-          <div className="header_optionBasket">
+        <Link to="/checkout" className="header__link">
+          <div className="header__optionBasket">
             <ShoppingBasketIcon />
-            <span>0</span>
+            <span className="header__optionLineTwo header__basketCount">0</span>
           </div>
         </Link>
       </div>
