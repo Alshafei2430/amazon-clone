@@ -1,9 +1,10 @@
 import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
+import uuid from "react-uuid";
 
-function CheckoutProduct({ id, title, price, image, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+function CheckoutProduct({ id, title, price, image, rating, hideButton }) {
+  const [{}, dispatch] = useStateValue();
   const removeFromBasket = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
@@ -22,14 +23,15 @@ function CheckoutProduct({ id, title, price, image, rating }) {
         <div className="checkoutProduct__rating">
           {Array(rating)
             .fill()
-            .map((_) => (
-              <p>&#x2606;</p>
+            .map(() => (
+              <p key={uuid()}>⭐️</p>
             ))}
         </div>
-        <button onClick={removeFromBasket}>Remove from basket</button>
+        {!hideButton && (
+          <button onClick={removeFromBasket}>Remove from basket</button>
+        )}
       </div>
     </div>
   );
 }
-
 export default CheckoutProduct;

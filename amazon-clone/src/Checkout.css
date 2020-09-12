@@ -1,5 +1,6 @@
 .checkout {
   display: flex;
+  justify-content: space-between;
   padding: 20px;
   background-color: white;
   height: max-content;
@@ -12,4 +13,9 @@
 .checkout__ad {
   width: 100%;
   margin-bottom: 10px;
+}
+.checkout__left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
